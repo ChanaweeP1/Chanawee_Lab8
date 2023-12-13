@@ -3,19 +3,19 @@
 #include<string>
 using namespace std;
 
-char findGrade(int Score){
+char findGrade(float Score){
 	if(Score > 90){
-		cout << 'A';
-	}else if(Score < 90 && Score > 75 ){
-		cout << 'B';
-	}else if(Score < 75 && Score > 60){
-		cout << 'C';
-	}else if(Score < 60 && Score > 45 ){
-		cout << 'D';
+		return 'A';
+	}else if(Score <= 90 && Score > 75 ){
+		return 'B';
+	}else if(Score <= 75 && Score > 60){
+		return 'C';
+	}else if(Score <= 60 && Score > 45 ){
+		return 'D';
 	}else if(Score <= 45 ){
-		cout << 'F';
-		return 0;
+		return 'F';
 	}
+	return 0;
 }
 
 int main(){
@@ -30,9 +30,9 @@ int main(){
 	while(i < N){
 		cout << "Name of student " << i+1 << ": ";
 		cin.ignore();
-		//[Missing Code 2] Get name of the i-th students that may include whitespace.
+		getline(cin,name[i]);
 		cout << "Score of student " << i+1 << ": ";
-		//[Missing Code 3] Get score of the i-th students.
+		cin >> score[i];
 		i++;
 	}
 	
