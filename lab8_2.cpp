@@ -3,7 +3,20 @@
 #include<string>
 using namespace std;
 
-//[Missing Code 1] Write definition of the function findGrade() here.
+char findGrade(int Score){
+	if(Score > 90){
+		cout << 'A';
+	}else if(Score < 90 && Score > 75 ){
+		cout << 'B';
+	}else if(Score < 75 && Score > 60){
+		cout << 'C';
+	}else if(Score < 60 && Score > 45 ){
+		cout << 'D';
+	}else if(Score <= 45 ){
+		cout << 'F';
+		return 0;
+	}
+}
 
 int main(){
 	//Input the number of students
